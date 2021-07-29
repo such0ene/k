@@ -31,7 +31,9 @@
 </head>
 
 <body>
-
+  <div class="spinner-wrapper">
+  <div class="spinner"></div>
+  </div>
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="d-flex flex-column">
@@ -327,6 +329,16 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script >
+    $(document).ready(function(){
+      preloaderFadeOutTime = 200;
+      function hidePreloader(){
+        var preloader = $('.spinner-wrapper');
+        preloader.fadeOut(preloaderFadeOutTime);
+      }
+      hidePreloader();
+    })
+  </script>
 
 </body>
 
